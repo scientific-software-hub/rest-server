@@ -33,7 +33,7 @@ This builds .zip package. Extract and deploy to any Servlet compliant applicatio
 
 # How to use
 
-See [wiki](https://github.com/hzg-wpi/rest-server/wiki)
+See [wiki](https://github.com/tango-controls/rest-server/wiki)
 
 # How to contribute
 
