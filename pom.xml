@@ -570,6 +570,7 @@
                             </execution>
                         </executions>
                     </plugin>
+                    <!-- TODO docker image -->
                 </plugins>
             </build>
         </profile>
