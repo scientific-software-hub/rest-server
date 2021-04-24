@@ -47,7 +47,7 @@
         <servlet-api.version>4.0.1</servlet-api.version>
         <tomcat.version>[8.5.34,9.0.33]</tomcat.version>
         <slf4j-api.version>1.7.5</slf4j-api.version>
-        <rest-test-suite.version>2.10</rest-test-suite.version>
+        <rest-test-suite.version>3.1</rest-test-suite.version>
         <custom.build.name>${project.artifactId}-${project.version}</custom.build.name>
         <tango.rest.server.instance.name>development</tango.rest.server.instance.name>
     </properties>
@@ -63,9 +63,9 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.tango-controls</groupId>
+                <groupId>de.hereon.tango</groupId>
                 <artifactId>rest-api-bom</artifactId>
-                <version>2.2</version>
+                <version>3.2</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -84,7 +84,7 @@
             <version>1.9.0</version>
         </dependency>
         <dependency>
-            <groupId>org.tango-controls</groupId>
+            <groupId>de.hereon.tango</groupId>
             <artifactId>rest-test-suite</artifactId>
             <version>${rest-test-suite.version}</version>
             <classifier>tests</classifier>
@@ -148,7 +148,7 @@
             <version>1.4.2</version>
         </dependency>
         <dependency>
-            <groupId>org.tango-controls</groupId>
+            <groupId>de.hereon.tango</groupId>
             <artifactId>rest-api</artifactId>
         </dependency>
         <dependency>
@@ -156,19 +156,19 @@
             <artifactId>guava</artifactId>
         </dependency>
         <dependency>
-            <groupId>de.hzg.wpi.tango.client.api</groupId>
-            <artifactId>ezTangoAPI</artifactId>
-            <version>3.0.0</version>
+            <groupId>de.hereon.tango.client.api</groupId>
+            <artifactId>ez</artifactId>
+            <version>3.0.1</version>
         </dependency>
         <dependency>
-            <groupId>org.tango-controls</groupId>
-            <artifactId>TangORB</artifactId>
-            <version>9.6.1-hzg.2</version>
+            <groupId>de.hereon.tango.orb</groupId>
+            <artifactId>tangorb</artifactId>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
-            <groupId>de.hzg.wpi.utils</groupId>
+            <groupId>de.hereon.utils</groupId>
             <artifactId>authorization</artifactId>
-            <version>1.2</version>
+            <version>1.3</version>
         </dependency>
     </dependencies>
 
@@ -297,18 +297,12 @@
     </build>
 
     <repositories>
-        <!-- tango-controls bintray maven repo to resolve dependencies-->
-        <repository>
-            <id>bintray-tango-controls-maven</id>
-            <url>http://dl.bintray.com/tango-controls/rest</url>
-        </repository>
         <repository>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-            <id>bintray-release</id>
-            <name>bintray</name>
-            <url>http://dl.bintray.com/hzgde/hzg-wpn-projects</url>
+            <id>github-hzg</id>
+            <url>https://maven.pkg.github.com/hzg-wpi/*</url>
         </repository>
     </repositories>
 
