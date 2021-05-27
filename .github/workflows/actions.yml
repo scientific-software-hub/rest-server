@@ -14,12 +14,12 @@ jobs:
           server-id: github-hzg
           server-username: GITHUB_USER
           server-password: GITHUB_TOKEN
-      - name: Run maven
-        run: mvn -B package --file pom.xml
         env:
           GITHUB_USER: ${{ secrets.MAVEN_GITHUB_USER }}
           GITHUB_TOKEN: ${{ secrets.MAVEN_GITHUB_TOKEN }}
+      - name: Run maven
+        run: mvn -B package --file pom.xml
       - name: Build and Push docker
         env:
           DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
-        run: mvn dockerfile:build dockerfile:push -Dmaven.dockerfile.username=ingvord -Dmaven.dockerfile.password=$DOCKER_HUB_TOKEN
+        run: mvn dockerfile:build dockerfile:push -Ddockerfile.password=$DOCKER_HUB_TOKEN
