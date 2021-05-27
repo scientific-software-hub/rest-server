@@ -22,4 +22,4 @@ jobs:
       - name: Build and Push docker
         env:
           DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
-        run: mvn dockerfile:build dockerfile:push -Ddockerfile.username=ingvord -Ddockerfile.password=$DOCKER_HUB_TOKEN
+        run: mvn dockerfile:build dockerfile:push -Dmaven.dockerfile.username=ingvord -Dmaven.dockerfile.password=$DOCKER_HUB_TOKEN
