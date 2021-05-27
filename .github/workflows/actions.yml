@@ -14,10 +14,10 @@ jobs:
           server-id: github-hzg
           server-username: GITHUB_USER
           server-password: GITHUB_TOKEN
+      - name: Run maven
         env:
           GITHUB_USER: ${{ secrets.MAVEN_GITHUB_USER }}
           GITHUB_TOKEN: ${{ secrets.MAVEN_GITHUB_TOKEN }}
-      - name: Run maven
         run: mvn -B package --file pom.xml
       - name: Build and Push docker
         env:
