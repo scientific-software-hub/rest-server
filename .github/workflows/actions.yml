@@ -19,3 +19,7 @@ jobs:
         env:
           GITHUB_USER: ${{ secrets.MAVEN_GITHUB_USER }}
           GITHUB_TOKEN: ${{ secrets.MAVEN_GITHUB_TOKEN }}
+      - name: Build and Push docker
+        env:
+          DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
+        run: mvn dockerfile:build dockerfile:push
