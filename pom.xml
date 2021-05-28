@@ -317,8 +317,7 @@
                     <buildArgs>
                         <REST_SERVER_VERSION>${project.artifactId}-${project.version}</REST_SERVER_VERSION>
                     </buildArgs>
-                    <username>ingvord</username>
-                    <password>env.DOCKER_HUB_TOKEN</password>
+                    <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
                 </configuration>
             </plugin>
         </plugins>
@@ -582,13 +581,12 @@
                             </execution>
                         </executions>
                         <configuration>
-                            <username>ingvord</username>
-                            <password>env.DOCKER_HUB_TOKEN</password>
                             <repository>registry.hub.docker.com/${dockerhub.username}/${project.artifactId}</repository>
                             <tag>${project.version}</tag>
                             <buildArgs>
                                 <REST_SERVER_VERSION>${project.artifactId}-${project.version}</REST_SERVER_VERSION>
                             </buildArgs>
+                            <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
                         </configuration>
                     </plugin>
                     <plugin>
