@@ -39,7 +39,6 @@ public class DeviceInfos {
         instance.server = deviceInfo.server;
         instance.hostname = deviceInfo.hostname;
         instance.classname = deviceInfo.classname;
-        instance.is_taco = deviceInfo.is_taco;
 
         return instance;
     }

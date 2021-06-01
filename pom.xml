@@ -159,14 +159,9 @@
             <artifactId>guava</artifactId>
         </dependency>
         <dependency>
-            <groupId>de.hereon.tango.client.api</groupId>
+            <groupId>de.hereon.tango</groupId>
             <artifactId>ez</artifactId>
-            <version>3.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>de.hereon.tango.orb</groupId>
-            <artifactId>tangorb</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.5</version>
         </dependency>
         <dependency>
             <groupId>de.hereon.utils</groupId>

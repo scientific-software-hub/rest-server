@@ -20,7 +20,6 @@ import fr.esrf.Tango.DevFailed;
 import fr.esrf.TangoApi.ApiUtil;
 import fr.esrf.TangoApi.Database;
 import fr.esrf.TangoApi.DeviceProxy;
-import fr.esrf.TangoApi.DeviceProxyFactory;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -97,7 +96,7 @@ public class TangoDatabaseProxyImpl implements TangoDatabaseProxy {
     public List<String> getDeviceCommandNames(String device, String wildcard) {
         DeviceProxy deviceProxy = null;
         try {
-            deviceProxy = DeviceProxyFactory.get(device);
+            deviceProxy = new DeviceProxy(device);
         } catch (DevFailed devFailed) {
             throw new RuntimeException(devFailed);
         }

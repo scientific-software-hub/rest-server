@@ -19,7 +19,6 @@ package org.tango.web.server.proxy;
 import fr.esrf.Tango.DevFailed;
 import fr.esrf.TangoApi.Database;
 import fr.esrf.TangoApi.DeviceProxy;
-import fr.esrf.TangoApi.DeviceProxyFactory;
 import org.tango.client.ez.proxy.TangoProxies;
 import org.tango.client.ez.proxy.TangoProxy;
 import org.tango.client.ez.proxy.TangoProxyException;
@@ -125,7 +124,7 @@ public class Proxies {
 
     public static Optional<TangoPipeProxy> optionalTangoPipeProxy(String host, String deviceName, String name) {
         try {
-            DeviceProxy deviceProxy = DeviceProxyFactory.get("tango://" + host + "/" + deviceName);
+            DeviceProxy deviceProxy = new DeviceProxy("tango://" + host + "/" + deviceName);
             return Optional.of(new TangoPipeProxyImpl(host, deviceName, name, deviceProxy));
         } catch (DevFailed devFailed) {
             return Optional.empty();
