@@ -44,7 +44,7 @@
     </licenses>
 
     <properties>
-        <github.organization>hzg-wpi</github.organization>
+        <github.organization>hereon-wpi</github.organization>
         <github.repo>rest-server</github.repo>
         <dockerhub.username>hzhereon</dockerhub.username>
         <servlet-api.version>4.0.1</servlet-api.version>
@@ -161,7 +161,7 @@
         <dependency>
             <groupId>de.hereon.tango</groupId>
             <artifactId>ez</artifactId>
-            <version>1.0.5</version>
+            <version>1.0.6</version>
         </dependency>
         <dependency>
             <groupId>de.hereon.utils</groupId>
@@ -324,7 +324,7 @@
                 <enabled>false</enabled>
             </snapshots>
             <id>github-hzg</id>
-            <url>https://maven.pkg.github.com/hzg-wpi/*</url>
+            <url>https://maven.pkg.github.com/hereon-wpi/*</url>
         </repository>
     </repositories>
 
