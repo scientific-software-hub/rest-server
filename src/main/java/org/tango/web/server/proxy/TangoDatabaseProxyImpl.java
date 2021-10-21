@@ -74,7 +74,6 @@ public class TangoDatabaseProxyImpl implements TangoDatabaseProxy {
     @Override
     public List<String> getDeviceNames(String wildcard) {
         try {
-            ApiUtil.set_db_obj(host, port);
             return Arrays.asList(tangoDb.getDevices(wildcard));
         } catch (DevFailed devFailed) {
             return Collections.emptyList();

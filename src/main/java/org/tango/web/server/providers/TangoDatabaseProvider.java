@@ -81,13 +81,6 @@ public class TangoDatabaseProvider implements ContainerRequestFilter {
 
 
         TangoHost tangoHost = tangoHostExtractor.apply(uriInfo);
-        try {
-            ApiUtil.set_db_obj(tangoHost.host, tangoHost.port);
-        } catch (DevFailed ignored) {
-        } catch (UncheckedExecutionException e) {
-            requestContext.abortWith(Response.status(Response.Status.NOT_FOUND).entity(Failures.createInstance(e)).build());
-        }
-
         TangoDatabaseProxy tangoDb = context.get().hosts.
                 getUnchecked(tangoHost.toString()).orElseGet(() -> {
             try {
