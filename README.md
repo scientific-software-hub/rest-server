@@ -2,6 +2,8 @@
 
 This server implements [Tango REST API](https://github.com/tango-controls/rest-api)
 
+[![DOI](https://zenodo.org/badge/427032044.svg)](https://doi.org/10.5281/zenodo.14967078)
+
 [![time tracker](https://wakatime.com/badge/github/tango-controls/rest-server.svg)](https://wakatime.com/badge/github/tango-controls/rest-server)
 
 [![Download](https://img.shields.io/github/release/hzg-wpi/rest-server.svg?style=flat)](https://github.com/hzg-wpi/rest-server/releases/latest)
